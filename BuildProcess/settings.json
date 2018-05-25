@@ -1,0 +1,23 @@
+{
+  "projectname": "BuildProcess",
+  "srcFiles": [
+    "./build/*.js",
+    "./build/*.map",
+    "./build/*.css",
+    "./build/*.html",
+    "./build/img/**/*.png"
+  ],
+  "siteCollURL": {
+    "dev": "https://sympraxis.sharepoint.com/sites/Demos2013/BuildProcess",
+    "prod": "https://sympraxis.sharepoint.com/sites/Demos2013/BuildProcess"
+  },
+  "destFolder": "/Code/BuildProcess",
+  "webpackParams": {
+    "entries": {
+      "build-process": "./build-process.app.js"
+    },
+    "externals": {
+      "angular": "angular"
+    }
+  }
+}

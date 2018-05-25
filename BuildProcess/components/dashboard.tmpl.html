@@ -1,0 +1,13 @@
+<div ng-cloak>
+
+    <h1 ng-bind="vm.statusMessage"></h1>
+
+    <ul ng-repeat="task in vm.data.tasks">
+        <li>
+            <div ng-bind="task.Title"></div>
+            <div ng-bind="task.Author.title"></div>
+            <div ng-bind="task.Created | date"></div>
+        </li>
+    </ul>
+
+</div>
