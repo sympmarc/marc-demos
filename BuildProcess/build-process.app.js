@@ -1,6 +1,7 @@
 "use strict";
 
 // Branding
+import "./scss/build-process.scss";
 
 // Services
 import "./services";

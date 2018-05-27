@@ -1,0 +1,30 @@
+@import "colors";
+
+#build-process {
+  width:50%;
+
+  .demo-card {
+    width:200px;
+    float:left;
+    margin:10px;
+    border:1px $sympraxis-purple solid;
+    border-radius:10px;
+  }
+  .demo-card-header {
+    background-color:$sympraxis-green;
+    border-radius:10px 10px 0 0;
+    padding:5px;
+    color:#fff;
+
+  }
+  .demo-card-body {
+    background-color: lighten($sympraxis-purple, 50%);
+    padding:5px;
+  }
+  .demo-card-footer {
+    padding:5px;
+    font-size: 10px;
+  }
+
+}
+
