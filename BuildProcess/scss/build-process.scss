@@ -7,7 +7,7 @@
     width:200px;
     float:left;
     margin:10px;
-    border:1px $sympraxis-purple solid;
+/*    border:1px $sympraxis-purple solid; */
     border-radius:10px;
   }
   .demo-card-header {
@@ -18,10 +18,13 @@
 
   }
   .demo-card-body {
-    background-color: lighten($sympraxis-purple, 50%);
     padding:5px;
+    border-left:1px lighten($sympraxis-purple, 50%) solid;
+    border-right:1px lighten($sympraxis-purple, 50%) solid;
   }
   .demo-card-footer {
+    background-color: lighten($sympraxis-purple, 50%);
+    border-radius:0 0 10px 10px;
     padding:5px;
     font-size: 10px;
   }
