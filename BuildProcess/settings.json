@@ -17,7 +17,8 @@
       "build-process": "./build-process.app.js"
     },
     "externals": {
-      "angular": "angular"
+      "angular": "angular",
+      "ngRoute": "ngRoute"
     }
   }
 }

@@ -9,12 +9,15 @@ angular.module("buildProcessService", [])
 
 		  self.data = {};
 
+		  // Service function to retrieve all of the tasks
 		  self.getTasks = function () {
 
 			  var deferred = $q.defer();
 
 			  buildProcessFactory.getTasks().then(function (response) {
 
+			  	  // If we needed to process each task item, we would do it here.
+				  // Examples include: augmenting with data from other lists, etc.
 				  angular.forEach(response, function (obj, index) {
 
 				  });
