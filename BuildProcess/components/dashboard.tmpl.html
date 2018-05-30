@@ -2,12 +2,17 @@
 
     <h1 ng-bind="vm.statusMessage"></h1>
 
-    <div ng-repeat="task in vm.data.tasks">
+    <div ng-repeat="task in vm.data.tasks | orderBy:'-DueDate'">
             <div class="demo-card">
                 <div class="demo-card-header">
                     <div ng-bind="task.Title"></div>
+                    <div ng-bind="task.PercentComplete"></div>
                 </div>
                 <div class="demo-card-body">
+                    <div ng-if="task.DueDate">
+                        Due date: <span ng-bind="task.DueDate | date"></span>
+                    </div>
+
                     ...more details go here...
                 </div>
                 <div class="demo-card-footer">

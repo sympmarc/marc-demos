@@ -9,8 +9,7 @@
     "url": "https://github.com/Sympmarc/marc-demos/BuildProcess"
   },
   "scripts": {
-    "build-dev": "webpack --mode=development",
-    "build-prod": "webpack --mode=production"
+    "build": "webpack --mode=development"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
