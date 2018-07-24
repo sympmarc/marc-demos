@@ -6,9 +6,7 @@ angular.module("build-process")
 	  template: require("./dashboard.tmpl.html"),
 	  controller: "buildProcessDashboardController",
 	  controllerAs: "vm"
-  })
-
-
+  })// Comment
   .controller("buildProcessDashboardController", ["$sce", "$q", "$filter", "$location", "buildProcessService", "buildProcessFactory",
 	  function ($sce, $q, $filter, $location, buildProcessService, buildProcessFactory) {
 
