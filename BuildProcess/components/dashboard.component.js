@@ -16,8 +16,11 @@ angular.module("build-process")
 
 		  vm.data = buildProcessService.data;
 
-		  vm.$onInit = function () {
+		  vm.getPriorityColor = function(priority) {
+		  	return priority.split(" ")[1].toLowerCase();
+		  };
 
+		  vm.$onInit = function () {
 
 			  buildProcessService.getTasks().then(function() {
 

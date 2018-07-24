@@ -1,7 +1,6 @@
 "use strict";
 //Node v 6.12.0
 var gulp = require('gulp');
-var watch = require('gulp-watch');
 var cache = require('gulp-cache');
 var spsave = require('spsave').spsave;
 var map = require('map-stream');

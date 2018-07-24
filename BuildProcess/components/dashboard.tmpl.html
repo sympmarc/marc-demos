@@ -6,14 +6,17 @@
             <div class="demo-card">
                 <div class="demo-card-header">
                     <div ng-bind="task.Title"></div>
-                    <div ng-bind="task.PercentComplete"></div>
+                    <div class="demo-task-stats">
+                        <span class="demo-priority" ng-class="vm.getPriorityColor(task.Priority)" ng-bind="task.Priority"></span>
+                        <span class="demo-pct" ng-bind="task.PercentComplete"></span>
+                    </div>
                 </div>
                 <div class="demo-card-body">
                     <div ng-if="task.DueDate">
                         Due date: <span ng-bind="task.DueDate | date"></span>
                     </div>
 
-                    ...more details go here...
+                    ...more details go here soon...
                 </div>
                 <div class="demo-card-footer">
                     <span ng-bind="task.Author.title"></span> on

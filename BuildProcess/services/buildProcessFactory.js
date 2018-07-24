@@ -18,7 +18,8 @@ angular.module("buildProcessFactory", [])
                         Author: obj.Author[0],
                         Created: obj.Created ? new Date(obj.Created) : obj.Created,
                         DueDate: obj.DueDate ? new Date(obj.DueDate) : obj.DueDate,
-                        PercentComplete: obj.PercentComplete
+	                    PercentComplete: obj.PercentComplete,
+	                    Priority: obj.Priority
                     };
                 }
 
@@ -55,6 +56,7 @@ angular.module("buildProcessFactory", [])
                         "<FieldRef Name='Created'/>" +
                         "<FieldRef Name='DueDate'/>" +
                         "<FieldRef Name='PercentComplete'/>" +
+                        "<FieldRef Name='Priority'/>" +
                         "</ViewFields>",
                         Query: "",
                         OrderBy: "<OrderBy><FieldRef Name='Created' Ascending='False'/></OrderBy>",

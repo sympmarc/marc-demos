@@ -1,33 +1,62 @@
 @import "colors";
-// @import "sliding-quick-launch";
 
 #build-process {
-  width:75%;
+  width: 75%;
 
   .demo-card {
-    width:200px;
-    float:left;
-    margin:10px;
-/*    border:1px $sympraxis-purple solid; */
-    border-radius:10px;
+    width: 200px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
   }
   .demo-card-header {
-    background-color:$sympraxis-green;
-    border-radius:10px 10px 0 0;
-    padding:5px;
-    color:#fff;
+    background-color: $sympraxis-green;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    color: $white;
 
   }
   .demo-card-body {
-    padding:5px;
-    border-left:1px lighten($sympraxis-purple, 50%) solid;
-    border-right:1px lighten($sympraxis-purple, 50%) solid;
+    padding: 5px;
+    border-left: 1px lighten($sympraxis-purple, 50%) solid;
+    border-right: 1px lighten($sympraxis-purple, 50%) solid;
   }
   .demo-card-footer {
     background-color: lighten($sympraxis-purple, 50%);
-    border-radius:0 0 10px 10px;
-    padding:5px;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
     font-size: 10px;
+  }
+
+  .demo-task-stats {
+
+    margin-top:5px;
+
+    .demo-priority {
+      width: 70px;
+      border-radius: 3px;
+      padding: 2px;
+    }
+
+    .high {
+      background-color: $high;
+    }
+    .normal {
+      background-color: $normal;
+      color: $black;
+    }
+    .low {
+      background-color: $low;
+    }
+
+    .demo-pct {
+      width: 30px;
+      background-color: $grey;
+      border-radius: 3px;
+      padding: 2px;
+      color: $black;
+    }
+
   }
 
 }
