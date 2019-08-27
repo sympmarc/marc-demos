@@ -45,7 +45,7 @@ export class DataService implements IDataService {
         SelectProperties: ["Title", "Path", "SiteLogo"]
       });
 
-      sites = this.processSearchResults(result);
+      sites = this.processSearchResultsSites(result);
 
       return sites;
 
@@ -74,11 +74,11 @@ export class DataService implements IDataService {
 
     let searchResults = lodash.get(result, "RawSearchResults.PrimaryQueryResult.RelevantResults.Table", sites);
 
-    return this.processSearchResults2(searchResults);
+    return this.processSearchResultsWebs(searchResults);
 
   }
 
-  private processSearchResults(relevantResults: SearchResults): ISPSite[] {
+  private processSearchResultsSites(relevantResults: SearchResults): ISPSite[] {
 
     var sites: ISPSite[] = [];
 
@@ -100,7 +100,7 @@ export class DataService implements IDataService {
   }
 
 
-  private processSearchResults2(relevantResults: ISharePointSearchResultsTable): ISPSite[] {
+  private processSearchResultsWebs(relevantResults: ISharePointSearchResultsTable): ISPSite[] {
 
     var sites: ISPSite[] = [];
 

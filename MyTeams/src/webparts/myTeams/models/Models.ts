@@ -1,12 +1,10 @@
 import {WebPartContext} from '@microsoft/sp-webpart-base';
 import {PrincipalInfo} from "@pnp/sp";
 
-
 export interface IServiceProperties {
   context: WebPartContext;
   currentUser: PrincipalInfo;
 }
-
 
 export interface ISPSite {
   Title: string;
@@ -30,7 +28,6 @@ export class SPSite implements ISPSite {
 export interface IExclusion {
   SiteText: string;
 }
-
 
 export interface ISharePointSearchResults {
   PrimaryQueryResult: ISharePointPrimaryQueryResult;
