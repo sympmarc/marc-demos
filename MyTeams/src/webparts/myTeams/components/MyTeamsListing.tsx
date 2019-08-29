@@ -4,12 +4,15 @@ import styles from './MyTeams.module.scss';
 import {ISPSite} from "../models/Models";
 
 export interface IMyTeamsListingProps {
+  title: string;
+  defaultLogo: string;
   sites: ISPSite[];
 }
 
 export default class MyTeamsListing extends React.Component<IMyTeamsListingProps, {}> {
   public render(): React.ReactElement<IMyTeamsListingProps> {
     return (
+      <div>
         <ul className={styles.sites}>
           {this.props.sites.map((site, index) => {
             return <li className={styles.site}>
@@ -25,6 +28,8 @@ export default class MyTeamsListing extends React.Component<IMyTeamsListingProps
             </li>;
           })}
         </ul>
+
+      </div>
     );
   }
 }

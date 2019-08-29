@@ -4,11 +4,13 @@ import * as lodash from 'lodash';
 import { Shimmer, ShimmerElementsGroup, ShimmerElementType } from 'office-ui-fabric-react/lib/Shimmer';
 
 import styles from './MyTeams.module.scss';
-import {IExclusion, ISPSite} from "../models/Models";
-import {DataService, IDataService} from "../services/DataService";
+import { IExclusion, ISPSite } from "../models/Models";
+import { DataService, IDataService } from "../services/DataService";
 import MyTeamsListing from "./MyTeamsListing";
 
 export interface IMyTeamsProps {
+  title: string;
+  defaultLogo: string;
   tenantSiteExclusionsContains: string;
   tenantSiteExclusionsEquals: string;
 }
@@ -37,7 +39,7 @@ export default class MyTeams extends React.Component<IMyTeamsProps, IMyTeamsStat
 
   }
 
-  private async _loadSites(): Promise<void>  {
+  private async _loadSites(): Promise<void> {
 
     // Site results
     var siteList: ISPSite[] = await this.dataService.getSiteData();
@@ -67,6 +69,9 @@ export default class MyTeams extends React.Component<IMyTeamsProps, IMyTeamsStat
   public render(): React.ReactElement<IMyTeamsProps> {
     return (
       <div className={styles.myTeams}>
+        {this.props.title.length > 0 &&
+          <div className={styles.webPartTitle}>{this.props.title}</div>
+        }
         {this.state.sites.length === 0 &&
           <div>
             <Shimmer className={styles.siteShimmer} customElementsGroup={this._getCustomElements()} width={300}>
@@ -85,6 +90,8 @@ export default class MyTeams extends React.Component<IMyTeamsProps, IMyTeamsStat
         }
         {this.state.sites.length > 0 &&
           <MyTeamsListing
+            title={this.props.title}
+            defaultLogo={this.props.defaultLogo}
             sites={this.state.sites}>
           </MyTeamsListing>
         }
