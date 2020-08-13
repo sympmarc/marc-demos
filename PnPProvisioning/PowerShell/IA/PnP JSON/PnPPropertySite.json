@@ -1,0 +1,45 @@
+{
+    "$schema":"https://aka.ms/sppnp-extract-configuration-schema",
+    "handlers": [
+        "WebSettings",
+        "Navigation",
+        "Fields",
+        "ContentTypes",
+        "Lists",
+        "Pages"
+    ],
+    "navigation": {
+        "removeExistingNodes": true
+    },
+    "contentTypes": {
+        "groups": [
+            "_Demo",
+            "_Demo Accounting",
+            "_Demo Organizational",
+            "_Demo Property Operations",
+            "_Demo Tenants"
+        ]
+    },
+    "lists": {
+        "lists": [
+            {
+                "title": "Property Operations"
+            },
+            {
+                "title": "Tenants"
+            },
+            {
+                "title": "Accounting & Finance"
+            },
+            {
+                "title": "Organizational & Loan Documents"
+            },
+            {
+                "title": "Acquisition & Development"
+            },
+            {
+                "title": "Archive"
+            }
+        ]
+    }
+}
