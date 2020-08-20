@@ -11,12 +11,12 @@ $adminConnection = Connect-PnPOnline -Url $adminSiteUrl -Credentials sympmarc -R
 $hubSite = "Properties"
 $propertiesHub = Get-PnPHubSite -Identity "https://sympmarc.sharepoint.com/sites/$($hubSite)"
 
-# Set up Project site parameters
-$siteTitle = "foo"
-$propertyCode = "aaa"
+# Set up new Project Site parameters
+$siteTitle = "Demo PnP"
+$propertyCode = "PnP5"
 
 # Create the new site
-Write-Host "Creating $($siteTitle)($($propertyCode)) Property Site"
+Write-Host "Creating $($siteTitle) ($($propertyCode)) Property Site"
 New-PnPSite -Connection $adminConnection -Type TeamSite -Title $siteTitle -Alias $propertyCode -HubSiteId $propertiesHub.SiteId -IsPublic -Wait
 
 $newSite = Connect-PnPOnline -Url "https://sympmarc.sharepoint.com/sites/$($propertyCode)" -Credentials sympmarc -ReturnConnection
@@ -30,9 +30,7 @@ $params = @{
 # Apply PnP Template
 Apply-PnPProvisioningTemplate `
     -Connection $newSite `
-    -Path "./PowerShell/IA/PnP XML/PnP-Provisioning-PropertySite.xml" `
+    -Path "./PowerShell/IA/PnP XML/PnP-Provisioning-DemoSite.xml" `
     -Parameters $params
 
-
-
-# Remove-PnPTenantSite -Url $newSite. -Force -SkipRecycleBin
+# Remove-PnPTenantSite -Url $newSite -Force -SkipRecycleBin
