@@ -11,9 +11,9 @@ $adminConnection = Connect-PnPOnline -Url $adminSiteUrl -Credentials sympmarc -R
 $hubSite = "Properties"
 $propertiesHub = Get-PnPHubSite -Identity "https://sympmarc.sharepoint.com/sites/$($hubSite)"
 
-# Set up new Project Site parameters
-$siteTitle = "Demo PnP"
-$propertyCode = "PnP5"
+# Set up new Property Site parameters
+$siteTitle = "Demo Adelaide"
+$propertyCode = "AUS"
 
 # Create the new site
 Write-Host "Creating $($siteTitle) ($($propertyCode)) Property Site"

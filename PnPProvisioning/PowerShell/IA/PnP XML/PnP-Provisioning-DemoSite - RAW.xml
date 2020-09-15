@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
-  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.24.2008.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-76A2EE604B624C84B7B15FE0D0A981D1">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-76A2EE604B624C84B7B15FE0D0A981D1" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
-      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='ad41febe-e93c-4277-b1f3-1ede37d06282'&amp;hash=637334668403821168" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" MembersCanShare="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.25.2009.1, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-C3EF43F48C764141B810A572E66BF4C1">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-C3EF43F48C764141B810A572E66BF4C1" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='ad41febe-e93c-4277-b1f3-1ede37d06282'&amp;hash=637357221198370221" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" MembersCanShare="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
       <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
         <pnp:GlobalNavigation NavigationType="Structural">
           <pnp:StructuralNavigation RemoveExistingNodes="true" />
@@ -218,7 +218,7 @@
             <pnp:FieldRef ID="4fa28f06-c4b4-4db2-9886-71d115037b41" Name="InspectionType" DisplayName="Inspection Type" />
           </pnp:FieldRefs>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://17-eastus1.pushp.svc.ms/notifications?token=w2-99ef9c00-4760-4be9-81ff-d4fcb4f67952" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://eastus1.pushnp.svc.ms/notifications?token=34d12e05-d2e0-41b0-b21b-6b96e02a5a5b" ExpiresInDays="1" />
           </pnp:Webhooks>
         </pnp:ListInstance>
       </pnp:Lists>

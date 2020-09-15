@@ -11,8 +11,8 @@ class List {
 }
 
 $Lists = @(
+    [List]@{ListName="Shared Documents"}
     [List]@{ListName="Property"}
-
 )
 
 foreach($l in $Lists)
