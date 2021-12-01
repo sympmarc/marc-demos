@@ -7,11 +7,12 @@
 
 .myTeams {
 
-  .title {
+  .webPartTitle {
     @include ms-font-xl;
-    //    @include ms-fontColor-white;
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-
+    font-size: 24px;
+    font-weight:100;
+    margin-bottom:20px;
   }
 
   .sites {
@@ -22,7 +23,6 @@
     box-sizing: border-box;
     margin: 10px;
     padding: 10px;
-    //    line-height: 25px;
     list-style-type: none;
   }
 
@@ -80,7 +80,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 24px;
-        color: $ms-color-themePrimary;
+        color: $logo-main;
       }
     }
   }

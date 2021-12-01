@@ -12,6 +12,7 @@ import MyTeams, {IMyTeamsProps} from './components/MyTeams';
 
 export interface IMyTeamsWebPartProps {
   title: string;
+  defaultLogo: string;
   tenantSiteExclusionsContains: string;
   tenantSiteExclusionsEquals: string;
 }
@@ -34,6 +35,8 @@ export default class MyTeamsWebPart extends BaseClientSideWebPart<IMyTeamsWebPar
       const element: React.ReactElement<IMyTeamsProps> = React.createElement(
         MyTeams,
         {
+          title: this.properties.title,
+          defaultLogo: this.properties.defaultLogo,
           tenantSiteExclusionsContains: this.properties.tenantSiteExclusionsContains,
           tenantSiteExclusionsEquals: this.properties.tenantSiteExclusionsEquals
         }
