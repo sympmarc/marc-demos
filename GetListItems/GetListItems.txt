@@ -1,0 +1,27 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.SPServices/2014.02/jquery.SPServices-2014.02.min.js"></script>
+<script language="javascript" type="text/javascript">
+
+$(document).ready(function() {
+  $().SPServices({
+    operation: "GetListItems",
+    async: false,
+    listName: "Colors",
+    CAMLViewFields: "<ViewFields><FieldRef Name='Title' /><FieldRef Name='HexCode' /><FieldRef Name='InfoLink' /></ViewFields>",
+    completefunc: function (xData, Status) {
+      $(xData.responseXML).SPFilterNode("z:row").each(function() {
+
+        var infoLink = $(this).attr("ows_InfoLink").split(",");
+
+        var liHtml = "<li>" +
+            "<span style='color:" + $(this).attr("ows_HexCode") + "'>"+ $(this).attr("ows_Title") + "</span>" +
+            " - " +
+            "<a href='" + infoLink[0] + "'>" + infoLink[1] + "</a>" +
+          "</li>";
+        $("#wpDemoColors").append(liHtml);
+      });
+    }
+  });
+});
+</script>
+<ul id="wpDemoColors"/>
