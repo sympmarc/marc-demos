@@ -19,10 +19,6 @@ export interface IMyTeamsWebPartProps {
 
 export default class MyTeamsWebPart extends BaseClientSideWebPart<IMyTeamsWebPartProps> {
 
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
-
   private async init(): Promise<React.ReactElement<any>> {
 
     sp.setup({

@@ -1,9 +1,10 @@
-$adminSiteUrl = "https://sympmarc-admin.sharepoint.com"
+$tenant = "sympmarc"
+$adminSiteUrl = "https://$($tenant)-admin.sharepoint.com"
 
 # Custom functions
 Import-Module "./Powershell/UtilityFunctions.psm1" -Force
 
-Connect-PnPOnline -Url $adminSiteUrl -Credential sympmarc
+Connect-PnPOnline -Url $adminSiteUrl -Interactive
 
 class SiteScript {
     [string]$SiteScriptName;

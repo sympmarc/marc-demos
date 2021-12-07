@@ -1,5 +1,6 @@
-$adminSiteUrl = "https://sympmarc-admin.sharepoint.com"
-$templateSiteUrl = "https://sympmarc.sharepoint.com/sites/InformationArchitecture"
+$tenant = "sympmarc"
+$adminSiteUrl = "https://$($tenant)c-admin.sharepoint.com"
+$templateSiteUrl = "https://$($tenant).sharepoint.com/sites/InformationArchitecture"
 
 # Custom functions
 Import-Module "./Powershell/UtilityFunctions.psm1" -Force
