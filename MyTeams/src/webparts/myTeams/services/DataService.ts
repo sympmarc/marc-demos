@@ -1,6 +1,6 @@
 import * as lodash from '@microsoft/sp-lodash-subset';
 
-import {QueryPropertyValueType, SearchQuery, SearchResults, sp} from "@pnp/sp";
+import { QueryPropertyValueType, SearchQuery, SearchResults, sp } from "@pnp/sp";
 
 import {
   ISPSite,
@@ -118,7 +118,6 @@ export class DataService implements IDataService {
         }
         if (cell.Key === "SiteLogo") {
           site.SiteLogo = cell.Value ? cell.Value : defaultLogo;
-//          site.SiteLogo = cell.Value;
         }
 
       });

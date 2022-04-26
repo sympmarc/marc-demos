@@ -70,7 +70,7 @@ export default class MyTeams extends React.Component<IMyTeamsProps, IMyTeamsStat
     return (
       <div className={styles.myTeams}>
         {this.props.title.length > 0 &&
-          <div className={styles.webPartTitle}>{this.props.title}</div>
+          <div className={styles.webPartTitle}>{this.props.title} and {this.props.title}</div>
         }
         {this.state.sites.length === 0 &&
           <div>

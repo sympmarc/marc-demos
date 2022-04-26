@@ -1,10 +1,10 @@
-# Upgrade project MyTeams to v1.13.1
+# Upgrade project MyTeams to v1.14.0
 
-Date: 12/7/2021
+Date: 4/20/2022
 
 ## Findings
 
-Following is the list of steps required to upgrade your project to SharePoint Framework version 1.13.1. [Summary](#Summary) of the modifications is included at the end of the report.
+Following is the list of steps required to upgrade your project to SharePoint Framework version 1.14.0. [Summary](#Summary) of the modifications is included at the end of the report.
 
 ### FN001001 @microsoft/sp-core-library | Required
 
@@ -13,7 +13,7 @@ Upgrade SharePoint Framework dependency package @microsoft/sp-core-library
 Execute the following command:
 
 ```sh
-npm i -SE @microsoft/sp-core-library@1.13.1
+npm i -SE @microsoft/sp-core-library@1.14.0
 ```
 
 File: [./package.json:14:5](./package.json)
@@ -25,7 +25,7 @@ Upgrade SharePoint Framework dependency package @microsoft/sp-lodash-subset
 Execute the following command:
 
 ```sh
-npm i -SE @microsoft/sp-lodash-subset@1.13.1
+npm i -SE @microsoft/sp-lodash-subset@1.14.0
 ```
 
 File: [./package.json:15:5](./package.json)
@@ -37,7 +37,7 @@ Upgrade SharePoint Framework dependency package @microsoft/sp-office-ui-fabric-c
 Execute the following command:
 
 ```sh
-npm i -SE @microsoft/sp-office-ui-fabric-core@1.13.1
+npm i -SE @microsoft/sp-office-ui-fabric-core@1.14.0
 ```
 
 File: [./package.json:16:5](./package.json)
@@ -49,7 +49,7 @@ Upgrade SharePoint Framework dependency package @microsoft/sp-webpart-base
 Execute the following command:
 
 ```sh
-npm i -SE @microsoft/sp-webpart-base@1.13.1
+npm i -SE @microsoft/sp-webpart-base@1.14.0
 ```
 
 File: [./package.json:17:5](./package.json)
@@ -61,7 +61,7 @@ Install SharePoint Framework dependency package @microsoft/sp-property-pane
 Execute the following command:
 
 ```sh
-npm i -SE @microsoft/sp-property-pane@1.13.1
+npm i -SE @microsoft/sp-property-pane@1.14.0
 ```
 
 File: [./package.json:13:3](./package.json)
@@ -73,7 +73,7 @@ Upgrade SharePoint Framework dev dependency package @microsoft/sp-build-web
 Execute the following command:
 
 ```sh
-npm i -DE @microsoft/sp-build-web@1.13.1
+npm i -DE @microsoft/sp-build-web@1.14.0
 ```
 
 File: [./package.json:35:5](./package.json)
@@ -85,7 +85,7 @@ Upgrade SharePoint Framework dev dependency package @microsoft/sp-module-interfa
 Execute the following command:
 
 ```sh
-npm i -DE @microsoft/sp-module-interfaces@1.13.1
+npm i -DE @microsoft/sp-module-interfaces@1.14.0
 ```
 
 File: [./package.json:36:5](./package.json)
@@ -97,7 +97,7 @@ Upgrade SharePoint Framework dev dependency package @microsoft/sp-tslint-rules
 Execute the following command:
 
 ```sh
-npm i -DE @microsoft/sp-tslint-rules@1.13.1
+npm i -DE @microsoft/sp-tslint-rules@1.14.0
 ```
 
 File: [./package.json:37:5](./package.json)
@@ -114,8 +114,53 @@ In package-solution.json add developer section
       "privacyUrl": "",
       "termsOfUseUrl": "",
       "websiteUrl": "",
-      "mpnId": "Undefined-1.13.1"
+      "mpnId": "Undefined-1.14.0"
     }
+  }
+}
+```
+
+File: [./config/package-solution.json:3:3](./config/package-solution.json)
+
+### FN006005 package-solution.json metadata | Required
+
+In package-solution.json add metadata section
+
+```json
+{
+  "solution": {
+    "metadata": {
+      "shortDescription": {
+        "default": "my-teams description"
+      },
+      "longDescription": {
+        "default": "my-teams description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    }
+  }
+}
+```
+
+File: [./config/package-solution.json:3:3](./config/package-solution.json)
+
+### FN006006 package-solution.json features | Required
+
+In package-solution.json add features section
+
+```json
+{
+  "solution": {
+    "features": [
+      {
+        "title": "my-teams Feature",
+        "description": "The feature that activates elements of the my-teams solution.",
+        "id": "4c0437d2-f4c4-48f4-9577-2f166891caa6",
+        "version": "1.0.0.3"
+      }
+    ]
   }
 }
 ```
@@ -129,7 +174,7 @@ Update version in .yo-rc.json
 ```json
 {
   "@microsoft/generator-sharepoint": {
-    "version": "1.13.1"
+    "version": "1.14.0"
   }
 }
 ```
@@ -390,18 +435,6 @@ build.rig.getTasks = function () {
 
 File: [./gulpfile.js](./gulpfile.js)
 
-### FN015006 .editorconfig | Required
-
-Remove file .editorconfig
-
-Execute the following command:
-
-```sh
-rm ".editorconfig"
-```
-
-File: [.editorconfig](.editorconfig)
-
 ### FN019002 tslint.json extends | Required
 
 Update tslint.json extends property
@@ -531,11 +564,10 @@ File: [./package.json](./package.json)
 ```sh
 npm un -S @types/react @types/react-dom @types/webpack-env @types/es6-promise
 npm un -D @microsoft/sp-webpart-workbench @types/chai @types/mocha
-npm i -SE @microsoft/sp-core-library@1.13.1 @microsoft/sp-lodash-subset@1.13.1 @microsoft/sp-office-ui-fabric-core@1.13.1 @microsoft/sp-webpart-base@1.13.1 @microsoft/sp-property-pane@1.13.1 react@16.13.1 react-dom@16.13.1 office-ui-fabric-react@7.174.1
-npm i -DE @microsoft/sp-build-web@1.13.1 @microsoft/sp-module-interfaces@1.13.1 @microsoft/sp-tslint-rules@1.13.1 @types/react@16.9.51 @microsoft/rush-stack-compiler-3.9@0.4.47 gulp@4.0.2 @types/react-dom@16.9.8 @types/webpack-env@1.13.1 @types/es6-promise@0.0.33
+npm i -SE @microsoft/sp-core-library@1.14.0 @microsoft/sp-lodash-subset@1.14.0 @microsoft/sp-office-ui-fabric-core@1.14.0 @microsoft/sp-webpart-base@1.14.0 @microsoft/sp-property-pane@1.14.0 react@16.13.1 react-dom@16.13.1 office-ui-fabric-react@7.174.1
+npm i -DE @microsoft/sp-build-web@1.14.0 @microsoft/sp-module-interfaces@1.14.0 @microsoft/sp-tslint-rules@1.14.0 @types/react@16.9.51 @microsoft/rush-stack-compiler-3.9@0.4.47 gulp@4.0.2 @types/react-dom@16.9.8 @types/webpack-env@1.13.1 @types/es6-promise@0.0.33
 npm dedupe
 rm "config\copy-assets.json"
-rm ".editorconfig"
 ```
 
 ### Modify files
@@ -552,8 +584,45 @@ In package-solution.json add developer section:
       "privacyUrl": "",
       "termsOfUseUrl": "",
       "websiteUrl": "",
-      "mpnId": "Undefined-1.13.1"
+      "mpnId": "Undefined-1.14.0"
     }
+  }
+}
+```
+
+In package-solution.json add metadata section:
+
+```json
+{
+  "solution": {
+    "metadata": {
+      "shortDescription": {
+        "default": "my-teams description"
+      },
+      "longDescription": {
+        "default": "my-teams description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    }
+  }
+}
+```
+
+In package-solution.json add features section:
+
+```json
+{
+  "solution": {
+    "features": [
+      {
+        "title": "my-teams Feature",
+        "description": "The feature that activates elements of the my-teams solution.",
+        "id": "4c0437d2-f4c4-48f4-9577-2f166891caa6",
+        "version": "1.0.0.3"
+      }
+    ]
   }
 }
 ```
@@ -565,7 +634,7 @@ Update version in .yo-rc.json:
 ```json
 {
   "@microsoft/generator-sharepoint": {
-    "version": "1.13.1"
+    "version": "1.14.0"
   }
 }
 ```

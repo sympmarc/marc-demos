@@ -1,6 +1,6 @@
 {
   "@microsoft/generator-sharepoint": {
-    "version": "1.9.1",
+    "version": "1.14.1",
     "libraryName": "my-teams",
     "libraryId": "3b5091b5-72dc-432b-a4d0-8ee202bd25e5",
     "environment": "spo",

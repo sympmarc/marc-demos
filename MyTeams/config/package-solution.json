@@ -5,7 +5,33 @@
     "id": "3b5091b5-72dc-432b-a4d0-8ee202bd25e5",
     "version": "1.0.0.3",
     "includeClientSideAssets": true,
-    "isDomainIsolated": false
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "websiteUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "my-teams description"
+      },
+      "longDescription": {
+        "default": "my-teams description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "my-teams Feature",
+        "description": "The feature that activates elements of the my-teams solution.",
+        "id": "4c0437d2-f4c4-48f4-9577-2f166891caa6",
+        "version": "1.0.0.3"
+      }
+    ]
   },
   "paths": {
     "zippedPackage": "solution/my-teams.sppkg"
