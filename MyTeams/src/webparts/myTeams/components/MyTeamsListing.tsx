@@ -18,7 +18,7 @@ export default class MyTeamsListing extends React.Component<IMyTeamsListingProps
             return <li className={styles.site}>
               <div>
                 <div>
-                  <img className={styles.siteLogo} src={site.SiteLogo}></img>
+                  <img alt={site.Title} className={styles.siteLogo} src={site.SiteLogo}></img>
                 </div>
                 <div>
                   <a className="ms-font-l" title={site.Title} target="_blank" href={site.Path}>{site.Title}</a>

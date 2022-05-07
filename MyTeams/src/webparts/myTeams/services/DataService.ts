@@ -11,7 +11,7 @@ import {
 } from '../models/Models';
 
 
-const defaultLogo: string = "/sites/Demos2013/SiteAssets/TheX.jpg";
+const defaultLogo: string = "/sites/Demos2013/SiteAssets/TheX.png";
 
 export interface IDataService {
   getSiteData(): Promise<ISPSite[]>;
