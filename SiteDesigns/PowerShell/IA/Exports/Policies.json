@@ -1,0 +1,262 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+  "actions": [
+    {
+      "verb": "createSiteColumnXml",
+      "schemaXml": "<Field DisplayName=\"Effective Date\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{142a17bc-da50-44c0-8693-9aaa33ffdc05}\" StaticName=\"EffectiveDate\" Name=\"EffectiveDate\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" FriendlyDisplayFormat=\"Disabled\" Format=\"DateOnly\" Indexed=\"FALSE\" CalType=\"0\" Customization=\"\" />",
+      "pushChanges": true
+    },
+    {
+      "verb": "createSiteColumnXml",
+      "schemaXml": "<Field DisplayName=\"Expiration Date\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{cf14ad67-6649-449a-8a10-9e5756459cc1}\" StaticName=\"ExpirationDate\" Name=\"ExpirationDate\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" FriendlyDisplayFormat=\"Disabled\" Format=\"DateOnly\" Indexed=\"FALSE\" CalType=\"0\" Customization=\"\" />",
+      "pushChanges": true
+    },
+    {
+      "verb": "createSiteColumnXml",
+      "schemaXml": "<Field DisplayName=\"Owner\" Type=\"User\" Required=\"FALSE\" List=\"UserInfo\" ID=\"{03a9244d-1916-4d0f-97c4-dbb08aa4e642}\" StaticName=\"Owner\" Name=\"Owner\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" UserSelectionMode=\"PeopleOnly\" Customization=\"\" />",
+      "pushChanges": true
+    },
+    {
+      "verb": "createSiteColumnXml",
+      "schemaXml": "<Field Type=\"TaxonomyFieldTypeMulti\" DisplayName=\"Applies To\" ShowField=\"Term1033\" ID=\"{9d9cbf53-0ffa-429c-9af1-b51900ece3f5}\" StaticName=\"AppliesTo\" Name=\"AppliesTo\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" Required=\"FALSE\" Indexed=\"FALSE\" Mult=\"TRUE\" Sortable=\"FALSE\" Customization=\"\"><Default /><Customization><ArrayOfProperty><Property><Name>SspId</Name><Value xmlns:q1=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q1:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">16e3afeb-a905-4e72-a0c2-d55e487b5084</Value></Property><Property><Name>GroupId</Name></Property><Property><Name>TermSetId</Name><Value xmlns:q2=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q2:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">5262b6c6-19fb-4acb-9670-e9e384672667</Value></Property><Property><Name>AnchorId</Name><Value xmlns:q3=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q3:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">00000000-0000-0000-0000-000000000000</Value></Property><Property><Name>UserCreated</Name><Value xmlns:q4=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q4:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>Open</Name><Value xmlns:q5=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q5:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsPathRendered</Name><Value xmlns:q7=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q7:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsKeyword</Name><Value xmlns:q8=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q8:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>TargetTemplate</Name></Property><Property><Name>CreateValuesInEditForm</Name><Value xmlns:q9=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q9:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsDocTagsEnabled</Name></Property><Property><Name>IsEnhancedImageTaggingEnabled</Name></Property><Property><Name>FilterAssemblyStrongName</Name><Value xmlns:q10=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q10:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value></Property><Property><Name>FilterClassName</Name><Value xmlns:q11=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q11:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value></Property><Property><Name>FilterMethodName</Name><Value xmlns:q12=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q12:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">GetFilteringHtml</Value></Property><Property><Name>FilterJavascriptProperty</Name><Value xmlns:q13=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q13:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">FilteringJavascript</Value></Property></ArrayOfProperty></Customization></Field>",
+      "pushChanges": true
+    },
+    {
+      "verb": "createSiteColumnXml",
+      "schemaXml": "<Field Type=\"TaxonomyFieldType\" DisplayName=\"Application\" ShowField=\"Term1033\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Group=\"_SympDesign\" ID=\"{dc5ea5b7-c65f-48fb-9666-7bef7456b216}\" StaticName=\"Application\" Name=\"Application\" Customization=\"\"><Default /><Customization><ArrayOfProperty><Property><Name>SspId</Name><Value xmlns:q1=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q1:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">16e3afeb-a905-4e72-a0c2-d55e487b5084</Value></Property><Property><Name>GroupId</Name></Property><Property><Name>TermSetId</Name><Value xmlns:q2=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q2:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">fdae0253-334b-4d99-8025-0f7a11af7cab</Value></Property><Property><Name>AnchorId</Name><Value xmlns:q3=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q3:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">00000000-0000-0000-0000-000000000000</Value></Property><Property><Name>UserCreated</Name><Value xmlns:q4=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q4:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>Open</Name><Value xmlns:q5=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q5:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsPathRendered</Name><Value xmlns:q7=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q7:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsKeyword</Name><Value xmlns:q8=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q8:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>TargetTemplate</Name></Property><Property><Name>CreateValuesInEditForm</Name><Value xmlns:q9=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q9:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsDocTagsEnabled</Name></Property><Property><Name>FilterAssemblyStrongName</Name><Value xmlns:q10=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q10:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value></Property><Property><Name>FilterClassName</Name><Value xmlns:q11=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q11:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value></Property><Property><Name>FilterMethodName</Name><Value xmlns:q12=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q12:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">GetFilteringHtml</Value></Property><Property><Name>FilterJavascriptProperty</Name><Value xmlns:q13=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q13:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">FilteringJavascript</Value></Property></ArrayOfProperty></Customization></Field>",
+      "pushChanges": true
+    },
+    {
+      "verb": "createContentType",
+      "name": "Policy",
+      "id": "0x010100AFE305CC9C99FB44BD812718A55EC77B01",
+      "description": "",
+      "parentId": "0x010100AFE305CC9C99FB44BD812718A55EC77B",
+      "hidden": false,
+      "group": "_SympDesign",
+      "subactions": [
+        {
+          "verb": "addSiteColumn",
+          "internalName": "EffectiveDate"
+        },
+        {
+          "verb": "addSiteColumn",
+          "internalName": "ExpirationDate"
+        },
+        {
+          "verb": "addSiteColumn",
+          "internalName": "Owner"
+        },
+        {
+          "verb": "addSiteColumn",
+          "internalName": "AppliesTo"
+        },
+        {
+          "verb": "addSiteColumn",
+          "internalName": "Application"
+        }
+      ]
+    },
+    {
+      "verb": "createSPList",
+      "listName": "[[LPolicies0001_listName]]",
+      "templateType": 101,
+      "color": "[[LPolicies0001_color]]",
+      "icon": "[[LPolicies0001_icon]]",
+      "addNavLink": "[[LPolicies0001_addNavLink]]",
+      "description": "[[LPolicies0001_description]]",
+      "identity": "LPolicies0001",
+      "subactions": [
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{08d89a66-4634-42b8-9d5a-0c27395a48b3}\" Type=\"Text\" Name=\"TriggerFlowInfo\" DisplayName=\"Trigger Flow Info\" DisplaceOnUpgrade=\"TRUE\" Hidden=\"TRUE\" ReadOnlyEnforced=\"FALSE\" ReadOnly=\"TRUE\" Required=\"FALSE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"TriggerFlowInfo\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{5cf76f15-5ced-4ddc-b409-7134ff3c332f}\" Type=\"TaxonomyFieldTypeMulti\" DisplayName=\"Image Tags\" Name=\"MediaServiceImageTags\" Group=\"_Hidden\" Hidden=\"FALSE\" Indexed=\"FALSE\" Sealed=\"FALSE\" ReadOnly=\"FALSE\" ShowInNewForm=\"TRUE\" ShowInDisplayForm=\"TRUE\" ShowInEditForm=\"TRUE\" ShowInListSettings=\"FALSE\" Viewable=\"FALSE\" Json=\"FALSE\" StaticName=\"MediaServiceImageTags\" ShowField=\"Term1033\" Mult=\"TRUE\" Sortable=\"FALSE\"><Customization><ArrayOfProperty><Property><Name>SspId</Name><Value xmlns:q1=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q1:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">16e3afeb-a905-4e72-a0c2-d55e487b5084</Value></Property><Property><Name>GroupId</Name></Property><Property><Name>TermSetId</Name><Value xmlns:q2=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q2:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">09814cd3-568e-fe90-9814-8d621ff8fb84</Value></Property><Property><Name>AnchorId</Name><Value xmlns:q3=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q3:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">fba54fb3-c3e1-fe81-a776-ca4b69148c4d</Value></Property><Property><Name>UserCreated</Name><Value xmlns:q4=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q4:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>Open</Name><Value xmlns:q5=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q5:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">true</Value></Property><Property><Name>IsPathRendered</Name><Value xmlns:q7=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q7:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsKeyword</Name><Value xmlns:q8=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q8:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>TargetTemplate</Name></Property><Property><Name>CreateValuesInEditForm</Name><Value xmlns:q9=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q9:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">true</Value></Property><Property><Name>IsDocTagsEnabled</Name></Property><Property><Name>IsEnhancedImageTaggingEnabled</Name></Property><Property><Name>FilterAssemblyStrongName</Name><Value xmlns:q10=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q10:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value></Property><Property><Name>FilterClassName</Name><Value xmlns:q11=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q11:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value></Property><Property><Name>FilterMethodName</Name><Value xmlns:q12=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q12:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">GetFilteringHtml</Value></Property><Property><Name>FilterJavascriptProperty</Name><Value xmlns:q13=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q13:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">FilteringJavascript</Value></Property></ArrayOfProperty></Customization></Field>"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field DisplayName=\"Effective Date\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{142a17bc-da50-44c0-8693-9aaa33ffdc05}\" StaticName=\"EffectiveDate\" Name=\"EffectiveDate0\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" FriendlyDisplayFormat=\"Disabled\" Format=\"DateOnly\" Indexed=\"FALSE\" CalType=\"0\" Customization=\"\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field Type=\"Note\" DisplayName=\"Benefit_0\" StaticName=\"ccdafe6e9c814b59b85362d1d26eaa69\" Name=\"ccdafe6e9c814b59b85362d1d26eaa69\" ID=\"{103ad7f8-5521-42ee-a728-d228b07a92cd}\" ShowInViewForms=\"FALSE\" Required=\"FALSE\" Hidden=\"TRUE\" CanToggleHidden=\"TRUE\" Customization=\"\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field Type=\"TaxonomyFieldType\" DisplayName=\"Benefit\" ShowField=\"Term1033\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Group=\"_SympDesign\" ID=\"{ccdafe6e-9c81-4b59-b853-62d1d26eaa69}\" StaticName=\"Benefit\" Name=\"Benefit\" Customization=\"\"><Default /><Customization><ArrayOfProperty><Property><Name>SspId</Name><Value xmlns:q1=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q1:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">16e3afeb-a905-4e72-a0c2-d55e487b5084</Value></Property><Property><Name>GroupId</Name></Property><Property><Name>TermSetId</Name><Value xmlns:q2=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q2:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">0a94d8c3-fa79-4478-9526-bc472869b5c7</Value></Property><Property><Name>AnchorId</Name><Value xmlns:q3=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q3:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">00000000-0000-0000-0000-000000000000</Value></Property><Property><Name>UserCreated</Name><Value xmlns:q4=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q4:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>Open</Name><Value xmlns:q5=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q5:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsPathRendered</Name><Value xmlns:q7=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q7:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsKeyword</Name><Value xmlns:q8=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q8:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>TargetTemplate</Name></Property><Property><Name>CreateValuesInEditForm</Name><Value xmlns:q9=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q9:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsDocTagsEnabled</Name></Property><Property><Name>IsEnhancedImageTaggingEnabled</Name></Property><Property><Name>FilterAssemblyStrongName</Name><Value xmlns:q10=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q10:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value></Property><Property><Name>FilterClassName</Name><Value xmlns:q11=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q11:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value></Property><Property><Name>FilterMethodName</Name><Value xmlns:q12=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q12:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">GetFilteringHtml</Value></Property><Property><Name>FilterJavascriptProperty</Name><Value xmlns:q13=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q13:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">FilteringJavascript</Value></Property></ArrayOfProperty></Customization></Field>"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field Type=\"Note\" DisplayName=\"Vendor_0\" StaticName=\"id4c79e89ec34829a69d2de3ad416ed3\" Name=\"id4c79e89ec34829a69d2de3ad416ed3\" ID=\"{f7bf30b2-80a4-450b-8f0b-1a2b4d71204e}\" ShowInViewForms=\"FALSE\" Required=\"FALSE\" Hidden=\"TRUE\" CanToggleHidden=\"TRUE\" Customization=\"\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field Type=\"TaxonomyFieldType\" DisplayName=\"Vendor\" ShowField=\"Term1033\" ID=\"{2d4c79e8-9ec3-4829-a69d-2de3ad416ed3}\" StaticName=\"Vendor\" Name=\"Vendor\" Group=\"_SympDesign\" CustomFormatter=\"\" EnforceUniqueValues=\"FALSE\" Required=\"FALSE\" Customization=\"\"><Default>1;#BioLegend|cafdd8a7-b561-45cf-9248-c57d6f71df2b</Default><Customization><ArrayOfProperty><Property><Name>SspId</Name><Value xmlns:q1=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q1:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">16e3afeb-a905-4e72-a0c2-d55e487b5084</Value></Property><Property><Name>GroupId</Name></Property><Property><Name>TermSetId</Name><Value xmlns:q2=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q2:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">f9c5a620-358d-45a1-88c1-6c43c385d31b</Value></Property><Property><Name>AnchorId</Name><Value xmlns:q3=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q3:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">00000000-0000-0000-0000-000000000000</Value></Property><Property><Name>UserCreated</Name><Value xmlns:q4=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q4:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>Open</Name><Value xmlns:q5=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q5:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsPathRendered</Name><Value xmlns:q7=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q7:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsKeyword</Name><Value xmlns:q8=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q8:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>TargetTemplate</Name></Property><Property><Name>CreateValuesInEditForm</Name><Value xmlns:q9=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q9:boolean\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">false</Value></Property><Property><Name>IsDocTagsEnabled</Name></Property><Property><Name>IsEnhancedImageTaggingEnabled</Name></Property><Property><Name>FilterAssemblyStrongName</Name><Value xmlns:q10=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q10:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value></Property><Property><Name>FilterClassName</Name><Value xmlns:q11=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q11:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value></Property><Property><Name>FilterMethodName</Name><Value xmlns:q12=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q12:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">GetFilteringHtml</Value></Property><Property><Name>FilterJavascriptProperty</Name><Value xmlns:q13=\"http://www.w3.org/2001/XMLSchema\" p4:type=\"q13:string\" xmlns:p4=\"http://www.w3.org/2001/XMLSchema-instance\">FilteringJavascript</Value></Property></ArrayOfProperty></Customization></Field>"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{dca4e5a0-0887-4480-8f7b-efcf76b76413}\" Name=\"MediaGeneratedMetadata\" DisplaceOnUpgrade=\"TRUE\" Hidden=\"TRUE\" ReadOnly=\"TRUE\" ShowInFileDlg=\"FALSE\" Type=\"Text\" FallbackType=\"Text\" DisplayName=\"Media Generated Metadata\" SchemaVersion=\"16.0.386.0\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"MediaGeneratedMetadata\" FromBaseType=\"TRUE\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{0f17d094-f613-4d33-8031-7b22650aad78}\" Name=\"MediaUserMetadata\" DisplaceOnUpgrade=\"TRUE\" Hidden=\"TRUE\" ReadOnly=\"TRUE\" ShowInFileDlg=\"FALSE\" Type=\"Text\" FallbackType=\"Text\" DisplayName=\"Media User Metadata\" SchemaVersion=\"16.0.386.0\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"MediaUserMetadata\" FromBaseType=\"TRUE\" />"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{5f47e085-2150-41dc-b661-442f3027f552}\" ReadOnly=\"TRUE\" Type=\"Computed\" Name=\"SelectFilename\" DisplayName=\"Select\" Hidden=\"TRUE\" CanToggleHidden=\"TRUE\" Sortable=\"FALSE\" Filterable=\"FALSE\" AuthoringInfo=\"(web part connection)\" HeaderImage=\"blank.gif\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"SelectFilename\" FromBaseType=\"TRUE\"><FieldRefs><FieldRef Name=\"ID\" /></FieldRefs><DisplayPattern><IfEqual><Expr1><GetVar Name=\"SelectedID\" /></Expr1><Expr2><Column Name=\"ID\" /></Expr2><Then><HTML><![CDATA[<img align=\"absmiddle\" style=\"cursor: pointer\" src=\"/_layouts/15/images/rbsel.gif?rev=47\" alt=\"]]></HTML><HTML>Selected</HTML><HTML><![CDATA[\"/>]]></HTML></Then><Else><HTML><![CDATA[<a href=\"javascript:SelectField(']]></HTML><GetVar Name=\"View\" /><HTML><![CDATA[',']]></HTML><ScriptQuote NotAddingQuote=\"TRUE\"><Column Name=\"ID\" /></ScriptQuote><HTML><![CDATA[');return false;\" onclick=\"javascript:SelectField(']]></HTML><GetVar Name=\"View\" /><HTML><![CDATA[',']]></HTML><ScriptQuote NotAddingQuote=\"TRUE\"><Column Name=\"ID\" /></ScriptQuote><HTML><![CDATA[');return false;\" target=\"_self\">]]></HTML><HTML><![CDATA[<img border=\"0\" align=\"absmiddle\" style=\"cursor: pointer\" src=\"/_layouts/15/images/rbunsel.gif?rev=47\"  alt=\"]]></HTML><HTML>Normal</HTML><HTML><![CDATA[\"/>]]></HTML><HTML><![CDATA[</a>]]></HTML></Else></IfEqual></DisplayPattern></Field>"
+        },
+        {
+          "verb": "addSPFieldXml",
+          "schemaXml": "<Field ID=\"{321bc046-2178-49bd-893f-7aa4fd61d04e}\" ReadOnly=\"TRUE\" Type=\"Computed\" Name=\"PolicyDisabledUICapabilities\" DisplaceOnUpgrade=\"TRUE\" DisplayName=\"Actions Disabled by Policy\" Filterable=\"FALSE\" Sortable=\"FALSE\" Hidden=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"PolicyDisabledUICapabilities\"><FieldRefs><FieldRef Name=\"FSObjType\" Key=\"Primary\" /><FieldRef Name=\"ID\" /></FieldRefs><DisplayPattern /></Field>"
+        },
+        {
+          "verb": "addContentType",
+          "name": "Policy",
+          "id": "0x010100AFE305CC9C99FB44BD812718A55EC77B01"
+        },
+        {
+          "verb": "addContentType",
+          "name": "Folder",
+          "id": "0x0120"
+        },
+        {
+          "verb": "addSPView",
+          "name": "All Documents",
+          "viewFields": [
+            "DocIcon",
+            "ContentType",
+            "LinkFilename",
+            "AppliesTo",
+            "Application",
+            "EffectiveDate0",
+            "ExpirationDate",
+            "Modified",
+            "Editor"
+          ],
+          "query": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "makeDefault": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "My Policies",
+          "viewFields": [
+            "DocIcon",
+            "ContentType",
+            "LinkFilename",
+            "Modified",
+            "Editor"
+          ],
+          "query": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "By expiration date",
+          "viewFields": [
+            "DocIcon",
+            "ContentType",
+            "LinkFilename",
+            "Modified",
+            "Editor"
+          ],
+          "query": "<GroupBy Collapse=\"TRUE\" GroupLimit=\"30\" /><OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "Policy",
+          "viewFields": [
+            "FileLeafRef",
+            "Title",
+            "EffectiveDate0",
+            "ExpirationDate",
+            "AppliesTo"
+          ],
+          "query": "<Where><Eq><FieldRef Name=\"ContentType\" /><Value Type=\"Computed\">Policy</Value></Eq></Where>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "Claim Thingy",
+          "viewFields": [
+            "FileLeafRef",
+            "Title",
+            "Benefit",
+            "Vendor"
+          ],
+          "query": "<Where><Eq><FieldRef Name=\"ContentType\" /><Value Type=\"Computed\">Claim Thingy</Value></Eq></Where>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "Effective Date Limited",
+          "viewFields": [
+            "DocIcon",
+            "ContentType",
+            "LinkFilename",
+            "EffectiveDate0",
+            "ExpirationDate",
+            "Modified",
+            "Editor"
+          ],
+          "query": "<Where><Or><Eq><FieldRef Name=\"EffectiveDate0\" /><Value Type=\"DateTime\">2020-04-01</Value></Eq><Eq><FieldRef Name=\"EffectiveDate0\" /><Value Type=\"DateTime\">2021-01-01</Value></Eq></Or></Where><OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy><GroupBy><FieldRef Name=\"EffectiveDate0\" Ascending=\"TRUE\" /></GroupBy>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        },
+        {
+          "verb": "addSPView",
+          "name": "Expired Policies",
+          "viewFields": [
+            "DocIcon",
+            "LinkFilename",
+            "AppliesTo",
+            "EffectiveDate0",
+            "ExpirationDate",
+            "Modified",
+            "Editor"
+          ],
+          "query": "<Where><Lt><FieldRef Name=\"ExpirationDate\" /><Value Type=\"DateTime\"><Today /></Value></Lt></Where>",
+          "rowLimit": 30,
+          "isPaged": true,
+          "replaceViewFields": true
+        }
+      ]
+    }
+  ],
+  "bindings": {
+    "LPolicies0001_listName": {
+      "source": "Input",
+      "defaultValue": "Policies"
+    },
+    "LPolicies0001_icon": {
+      "source": "Input",
+      "defaultValue": "0"
+    },
+    "LPolicies0001_description": {
+      "source": "Input",
+      "defaultValue": ""
+    },
+    "LPolicies0001_color": {
+      "source": "Input",
+      "defaultValue": "0"
+    },
+    "LPolicies0001_addNavLink": {
+      "source": "Input",
+      "defaultValue": "false"
+    }
+  }
+}
