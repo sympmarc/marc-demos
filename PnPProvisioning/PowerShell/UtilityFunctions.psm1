@@ -1,5 +1,39 @@
 <#
 .Synopsis
+.DESCRIPTION
+.EXAMPLE
+   Add-SympVariables
+#>
+function Add-SympVariables {
+   [CmdletBinding()]
+   [Alias()]
+   [OutputType([int])]
+   Param
+   (
+
+   )
+
+   Begin {
+
+      $root = ".\PowerShell"
+      $settings = Get-Content -Path "$($root)\.settings.json" | ConvertFrom-Json
+
+   }
+   Process {
+
+      Write-Host "Setting global variables..."
+
+      Set-Variable -Scope global -Name tenant -Value $settings.tenant
+      Set-Variable -Scope global -Name adminSiteUrl -Value "https://$($tenant)-admin.sharepoint.com"      
+
+   }
+   End {
+
+   }
+}
+
+<#
+.Synopsis
    Export a Site Script from an existing list (library)
 .DESCRIPTION
    Export a Site Script from an existing list (library)
@@ -33,7 +67,7 @@ function Export-SiteScriptFromList {
       Write-Host "Exporting list: $($ListName) in $($TemplateSiteUrl)"
 
       # Export to a specified location
-      Get-SPOSiteScriptFromList -ListUrl $fullPath | Out-File "./Powershell/IA/Exports/$($ListName).json"
+      Get-PnPSiteScriptFromList -Url $fullPath | Out-File "./Powershell/IA/Exports/$($ListName).json"
 
    }
    End {
@@ -45,9 +79,10 @@ function Export-SiteScriptFromList {
 .Synopsis
    Registers a Site Script with a SharePoint tenant
 .DESCRIPTION
-   Registers a Site Script with a SharePoint tenant or updates if a Site Script with the same SiteSciptTitle already exists
+   Registers a Site Script with a SharePoint tenant or updates if a Site Script with the same SiteSciptTitle already exists. Must already be connected to a site in the tenant. User that connected must be a SharePoint Admin. 
 .EXAMPLE
-   Add-SiteScript -AdminSiteUrl $adminSiteUrl -SiteScriptFile $SiteScriptPath -SiteScriptTitle "Set up Library" -Credentials $Credentials
+   $SiteScriptPath = "D:\Code\Matan\Deployment\PowerShell\IA\site-scripts\_MatanPropertyBase.json"
+   Add-SiteScript -SiteScriptFile $SiteScriptPath -SiteScriptTitle "Set up Library"
 #>
 function Add-SiteScript {
    [CmdletBinding()]
@@ -55,22 +90,14 @@ function Add-SiteScript {
    [OutputType([int])]
    Param
    (
-      # AdminSiteUrl - for connection
-      [string]
-      $AdminSiteUrl,
-
-      # SiteUrl
+      # Path to JSON file containing Site Script definition
       [string]
       $SiteScriptFile,
 
-      # ListName
+      # Title of Site Script
+      [Parameter(Mandatory=$true)]
       [string]
-      $SiteScriptTitle,
-
-      # Credentials
-      [SecureString]
-      $Credentials
-
+      $SiteScriptTitle
    )
 
    Begin {
@@ -83,10 +110,12 @@ function Add-SiteScript {
       $siteScript = Get-PnPSiteScript | Where-Object { $_.Title -eq $SiteScriptTitle }
 
       if (!$siteScript) {
+         Write-Host "Adding Site Script: $($SiteScriptTitle)"
          $script = Get-Content $SiteScriptFile -Raw
          $siteScript = (Add-PnPSiteScript -Title $SiteScriptTitle -Content $script) | Select-Object -First 1 Id   
       }
       else {
+         Write-Host "Updating Site Script: $($SiteScriptTitle)"
          Set-PnPSiteScript -Identity $siteScript.Id -Content (Get-Content $siteScriptFile -Raw)
       }
 

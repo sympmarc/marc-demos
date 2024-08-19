@@ -1,36 +1,24 @@
-#Requires -Module "SharePointPnPPowerShellOnline"
+# Load PnP.PowerShell, if it isn't already
+Import-Module PnP.PowerShell -Force
+Import-Module ./PowerShell/UtilityFunctions.psm1 -Force
 
-$adminSiteUrl = "https://sympmarc-admin.sharepoint.com"
+Add-SympVariables
 
-# Custom functions
-Import-Module "./Powershell/UtilityFunctions.psm1" -Force
+# Globals
+$hubSite = "Doggone Data"
 
-$adminConnection = Connect-PnPOnline -Url $adminSiteUrl -Credentials sympmarc -ReturnConnection
+# Set up Project site parameters
+$siteTitle = "foo"
+$siteUrl = "/sites/$($siteTitle)"
 
-# Properties Hub
-$hubSite = "Properties"
-$propertiesHub = Get-PnPHubSite -Identity "https://sympmarc.sharepoint.com/sites/$($hubSite)"
-
-# Set up new Property Site parameters
-$siteTitle = "Demo Adelaide"
-$propertyCode = "AUS"
-
-# Create the new site
-Write-Host "Creating $($siteTitle) ($($propertyCode)) Property Site"
-New-PnPSite -Connection $adminConnection -Type TeamSite -Title $siteTitle -Alias $propertyCode -HubSiteId $propertiesHub.SiteId -IsPublic -Wait
-
-$newSite = Connect-PnPOnline -Url "https://sympmarc.sharepoint.com/sites/$($propertyCode)" -Credentials sympmarc -ReturnConnection
-
-$params = @{
-    "HubSite"      = "$($hubSite)";
-    "SiteTitle"    = "$($siteTitle)";
-    "PropertyCode" = "$($propertyCode)";
-}
+$newSite = Connect-PnPOnline -Url "https://$($tenant).sharepoint.com$($siteUrl)" -Interactive -ReturnConnection
+$newWeb = Get-PnPSite -Connection @admin
 
 # Apply PnP Template
-Apply-PnPProvisioningTemplate `
+Invoke-PnPSiteTemplate `
     -Connection $newSite `
-    -Path "./PowerShell/IA/PnP XML/PnP-Provisioning-DemoSite.xml" `
-    -Parameters $params
-
-# Remove-PnPTenantSite -Url $newSite -Force -SkipRecycleBin
+    -Path "./PowerShell/IA/PnP XML/PnP-Provisioning-Department - RAW.xml" `
+    -Parameters @{
+    "HubSite"   = "$($hubSite)";
+    "SiteTitle" = "$($siteTitle)";
+}
